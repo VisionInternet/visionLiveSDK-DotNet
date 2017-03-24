@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Vision.Api.Common
+{
+    public enum HttpMethods
+    {
+        GET,
+        POST,
+        PUT,
+        DELETE
+    }
+}

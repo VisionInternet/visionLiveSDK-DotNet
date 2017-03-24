@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBB2F3B3-AE51-40BA-965B-87FB1607DB39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vision.Cms.MvcComponents.Calendar.Api</RootNamespace>
+    <AssemblyName>Vision.Cms.MvcComponents.Calendar.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\Vision.Cms.MvcComponents.Calendar.Api.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RegularAssemblyInfo.cs">
+      <Link>Properties\RegularAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Domain\Event.cs" />
+    <Compile Include="Domain\EventDocument.cs" />
+    <Compile Include="Domain\EventRegistrationAttendee.cs" />
+    <Compile Include="Domain\EventRegistration.cs" />
+    <Compile Include="Domain\EventRegistrationSetting.cs" />
+    <Compile Include="Domain\EventWaitingEmail.cs" />
+    <Compile Include="InternalConstants.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\EventFindRequest.cs" />
+    <Compile Include="Request\EventGetRequest.cs" />
+    <Compile Include="Request\EventRegistrationFindRequest.cs" />
+    <Compile Include="Request\EventRegistrationGetRequest.cs" />
+    <Compile Include="Request\EventWaitingEmailFindRequest.cs" />
+    <Compile Include="Response\EventFindResponse.cs" />
+    <Compile Include="Response\EventGetResponse.cs" />
+    <Compile Include="Response\EventRegistrationFindResponse.cs" />
+    <Compile Include="Response\EventRegistrationGetResponse.cs" />
+    <Compile Include="Response\EventWaitingEmailFindResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vision.Api.Common\Vision.Api.Common.csproj">
+      <Project>{007ef1bc-3f44-4d00-bb5d-0401dfb05ff0}</Project>
+      <Name>Vision.Api.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Vision.Cms.Mvc.Api\Vision.Cms.Mvc.Api.csproj">
+      <Project>{046b96f1-b20f-4775-8505-9b67a4be9d5d}</Project>
+      <Name>Vision.Cms.Mvc.Api</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Vision.Cms.MvcComponents.Calendar.Api.api" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

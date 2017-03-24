@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<visionApi>
+  <categories>
+    <category name="vision.cms.servicerequestscomponent" displayName="Service Request" isDefault="true">
+      <description><![CDATA[The Service Requests (govTrack CRM™) component provides a quick & easy way for citizens to submit requests and for the CMS processors to respond accordingly. It provides online progress tracking for immediate information and provides simple management with automatic deadline notification.]]></description>
+      <apis>
+        <api name="vision.cms.servicerequestscomponent.servicerequestcategory.find" displayName="Find Service Request Categories">
+          <description><![CDATA[This function retrieves service request categories.]]></description>
+          <params>
+            <param name="PageIndex" displayName="Page Index">
+              <description><![CDATA[The Page Index parameter controls which page of records to retrieve from the request. This parameter works with the Page Size parameter.]]></description>
+            </param>
+            <param name="PageSize" displayName="Page Size">
+              <description><![CDATA[The Page Size parameter controls how many records will be retrieved per request.]]></description>
+            </param>
+          </params>
+          <result name="Vision.Cms.MvcComponents.ServiceRequest.Api.Response.ServiceRequestCategoryFindResponse" displayName="Find Service Request Categories Response">
+            <description><![CDATA[This response returns a paging list of service request categories.]]></description>
+            <fields>
+              <field name="PagingList" displayName="Paging List">
+                <description><![CDATA[Return service request categories by paging list]]></description>
+              </field>
+            </fields>
+          </result>
+        </api>
+        <api name="vision.cms.servicerequestscomponent.servicerequest.find" displayName="Find Service Requests">
+          <description><![CDATA[This function retrieves service requests based on parameters.]]></description>
+          <params>
+            <param name="PageIndex" displayName="Page Index">
+              <description><![CDATA[The Page Index parameter controls which page of records to retrieve from the request. This parameter works with the Page Size parameter.]]></description>
+            </param>
+            <param name="PageSize" displayName="Page Size">
+              <description><![CDATA[The Page Size parameter controls how many records will be retrieved per request.]]></description>
+            </param>
+            <param name="SortBy" displayName="Sort By">
+              <description><![CDATA[The parameter Sort By supports the fields 'Subject', 'Status', 'Topic', 'ReportedDate']]></description>
+            </param>
+            <param name="Ascending" displayName="Ascending">
+              <description><![CDATA[The Ascending parameter determines the sort direction of the service requests.]]></description>
+            </param>
+            <param name="StartDate" displayName="Start Date">
+              <description><![CDATA[The Start Date parameter sets date range filter, all service requests after the start date parameter are returned.]]></description>
+            </param>
+            <param name="ReportedBy" displayName="Reported By">
+              <description><![CDATA[The Reported By parameter filters the results based on the reporter's email address.]]></description>
+            </param>
+            <param name="ToProcessor" displayName="To Processor">
+              <description><![CDATA[The To Processor parameter filters the results based on the processor's email address.]]></description>
+            </param>
+            <param name="Topic" displayName="Topic">
+              <description><![CDATA[The Topic parameter filters the result by the name of the topic.]]></description>
+            </param>
+          </params>
+          <result name="Vision.Cms.MvcComponents.ServiceRequest.Api.Response.ServiceRequestFindResponse" displayName="Find Service Requests Response">
+            <description><![CDATA[This response contains a paging list of the matching service requests.]]></description>
+            <fields>
+              <field name="PagingList" displayName="Paging List">
+                <description><![CDATA[This field contains a paging list of the records found in the request.]]></description>
+              </field>
+            </fields>
+          </result>
+        </api>
+        <api name="vision.cms.servicerequestscomponent.servicerequestpost.find" displayName="Find Service Request Posts">
+          <description><![CDATA[This function retrieves the service request posts of a service request.]]></description>
+          <params>
+            <param name="ServiceRequestID" displayName="Service Request ID">
+              <description><![CDATA[The Service Request ID parameter is the ID of the service request.]]></description>
+            </param>
+            <param name="PostedBy" displayName="Posted By">
+              <description><![CDATA[The Posted By parameter filters the results based on the service request poster's email address.]]></description>
+            </param>
+            <param name="StartDate" displayName="Start Date">
+              <description><![CDATA[The Start Date parameter sets the lower boundary of the date range filter. This date should be earlier than the End Date parameter.]]></description>
+            </param>
+            <param name="EndDate" displayName="End Date">
+              <description><![CDATA[The End Date parameter sets the upper boundary of the date range filter.]]></description>
+            </param>
+            <param name="Internal" displayName="Internal">
+              <description><![CDATA[The Internal parameter is a flag if true, indicates that service request post is internal, if false, it is open to the public. This parameter is not required.]]></description>
+            </param>
+            <param name="PageIndex" displayName="Page Index">
+              <description><![CDATA[The Page Index parameter controls which page of records to retrieve from the request. This parameter works with the Page Size parameter.]]></description>
+            </param>
+            <param name="PageSize" displayName="Page Size">
+              <description><![CDATA[The Page Size parameter controls how many records will be retrieved per request.]]></description>
+            </param>
+          </params>
+          <result name="Vision.Cms.MvcComponents.ServiceRequest.Api.Response.ServiceRequestPostFindResponse" displayName="Find Service Request Posts Response">
+            <description><![CDATA[This response returns a paging list for matching service request posts.]]></description>
+            <fields>
+              <field name="PagingList" displayName="Paging List">
+                <description><![CDATA[This field contains a paging list of the records found in the request.]]></description>
+              </field>
+            </fields>
+          </result>
+        </api>
+        <api name="vision.cms.servicerequestscomponent.servicerequest.findtopics" displayName="Find Service Request Topics">
+          <description><![CDATA[This function retrieves service request topics in a category.]]></description>
+          <params>
+            <param name="Category" displayName="Category">
+              <description><![CDATA[The Category parameter should contain the service request category name.]]></description>
+            </param>
+            <param name="PageIndex" displayName="Page Index">
+              <description><![CDATA[The Page Index parameter controls which page of records to retrieve from the request. This parameter works with the Page Size parameter.]]></description>
+            </param>
+            <param name="PageSize" displayName="Page Size">
+              <description><![CDATA[The Page Size parameter controls how many records will be retrieved per request.]]></description>
+            </param>
+          </params>
+          <result name="Vision.Cms.MvcComponents.ServiceRequest.Api.Response.ServiceRequestTopicFindRequest" displayName="Find Service Request Topics Response">
+            <description><![CDATA[This response returns a paging list for matching service request topics.]]></description>
+            <fields>
+              <field name="PagingList" displayName="Paging List">
+                <description><![CDATA[This field contains a paging list of the records found in the request.]]></description>
+              </field>
+            </fields>
+          </result>
+        </api>        
+      </apis>
+      <datas>
+        <data type="Vision.Cms.MvcComponents.ServiceRequest.Api.Domain.ServiceRequest" displayName="Service Request">
+          <description><![CDATA[Service Request]]></description>
+          <fields>
+            <field name="ID" displayName="ID">
+              <description><![CDATA[ID]]></description>
+            </field>
+            <field name="Status" displayName="Status">
+              <description><![CDATA[Status]]></description>
+            </field>
+            <field name="Topic" displayName="Topic">
+              <description><![CDATA[Topic]]></description>
+            </field>
+            <field name="ReportedOn" displayName="Reported On">
+              <description><![CDATA[Reported On]]></description>
+            </field>
+            <field name="ReportedBy" displayName="Reported By">
+              <description><![CDATA[Reported By]]></description>
+            </field>
+            <field name="AssignedTo" displayName="Assigned To">
+              <description><![CDATA[Assigned To]]></description>
+            </field>
+            <field name="LastUpdated" displayName="Last Updated">
+              <description><![CDATA[Last Updated]]></description>
+            </field>
+            <field name="LastUpdatedBy" displayName="Last Updated By">
+              <description><![CDATA[Last Updated By]]></description>
+            </field>
+            <field name="ExpectedCloseDate" displayName="Expected Close Date">
+              <description><![CDATA[Expected Close Date]]></description>
+            </field>
+            <field name="Subject" displayName="Subject">
+              <description><![CDATA[Subject]]></description>
+            </field>
+            <field name="Location" displayName="Location">
+              <description><![CDATA[Location]]></description>
+            </field>
+            <field name="Date" displayName="Date">
+              <description><![CDATA[Date]]></description>
+            </field>
+            <field name="CcEmailList" displayName="CC Email List">
+              <description><![CDATA[CC Email List]]></description>
+            </field>
+          </fields>
+        </data>
+        <data type="Vision.Cms.MvcComponents.ServiceRequest.Api.Domain.ServiceRequestCategory" displayName="Service Request Category">
+          <description><![CDATA[Service Request Category]]></description>
+          <fields>
+            <field name="ID" displayName="ID">
+              <description><![CDATA[ID]]></description>
+            </field>
+            <field name="Name" displayName="Name">
+              <description><![CDATA[Name]]></description>
+            </field>
+            <field name="LastUpdatedDate" displayName="Last Updated Date">
+              <description><![CDATA[Last Updated Date]]></description>
+            </field>
+            <field name="LastUpdatedBy" displayName="Last Updated By">
+              <description><![CDATA[Last Updated By]]></description>
+            </field>
+            <field name="ServiceRequestTopics" displayName="Service Request Topics">
+              <description><![CDATA[Service Request Topics]]></description>
+            </field>
+          </fields>
+        </data>
+        <data type="Vision.Cms.MvcComponents.ServiceRequest.Api.Domain.ServiceRequestPost" displayName="Service Request Post">
+          <description><![CDATA[Service Request Post]]></description>
+          <fields>
+            <field name="Content" displayName="Content">
+              <description><![CDATA[Content]]></description>
+            </field>
+            <field name="IsInternal" displayName="Is Internal">
+              <description><![CDATA[Is Internal]]></description>
+            </field>
+            <field name="IsComment" displayName="Is Comment">
+              <description><![CDATA[Is Comment]]></description>
+            </field>
+            <field name="PostBy" displayName="Post By">
+              <description><![CDATA[Post By]]></description>
+            </field>
+            <field name="ServiceRequestID" displayName="Service Request ID">
+              <description><![CDATA[Service Request ID]]></description>
+            </field>
+            <field name="Documents" displayName="Documents">
+              <description><![CDATA[Documents]]></description>
+            </field>
+          </fields>
+        </data>
+        <data type="Vision.Cms.MvcComponents.ServiceRequest.Api.Domain.ServiceRequestTopic" displayName="Service Request Topic">
+          <description><![CDATA[Service Request Topic]]></description>
+          <fields>
+            <field name="ID" displayName="ID">
+              <description><![CDATA[ID]]></description>
+            </field>
+            <field name="Name" displayName="Name">
+              <description><![CDATA[Name]]></description>
+            </field>
+            <field name="ProcessTime" displayName="Process Time">
+              <description><![CDATA[Process Time]]></description>
+            </field>
+            <field name="CcEmailList" displayName="CC Email List">
+              <description><![CDATA[CC Email List]]></description>
+            </field>
+            <field name="IsDateRequired" displayName="Is Date Required">
+              <description><![CDATA[Is Date Required]]></description>
+            </field>
+            <field name="IsLocationRequired" displayName="Is Location Required">
+              <description><![CDATA[Is Location Required]]></description>
+            </field>
+            <field name="AssignedProcessor" displayName="Assigned Processor">
+              <description><![CDATA[Assigned Processor]]></description>
+            </field>
+            <field name="Category" displayName="Category">
+              <description><![CDATA[Category]]></description>
+            </field>            
+          </fields>
+        </data>
+      </datas>
+    </category>
+  </categories>
+</visionApi>

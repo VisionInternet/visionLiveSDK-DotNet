@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<visionApi>
+  <categories>
+    <category name="vision.cms.calendarcomponent" displayName="Calendar" isDefault="true">
+      <description>
+        <![CDATA[The Calendar component is a listing of events entered into the Event Calendar.]]>
+      </description>
+      <apis>        
+        <api name="vision.cms.calendarcomponent.event.find" displayName="Find Events">
+          <description><![CDATA[This function retrieves event records with the use of a date range and a filter.]]></description>
+          <params>
+            <param name="PageIndex" displayName="Page Index">
+              <description><![CDATA[The Page Index parameter controls which page of records to retrieve from the request. This parameter works with the Page Size parameter.]]></description>
+            </param>
+            <param name="PageSize" displayName="Page Size">
+              <description><![CDATA[The Page Size parameter controls how many records will be retrieved per request.]]></description>
+            </param>
+            <param name="StartDate" displayName="Start Date">
+              <description><![CDATA[The Start Date parameter sets the lower boundary of the date range filter. This date should be earlier than the End Date parameter.]]></description>
+            </param>
+            <param name="EndDate" displayName="End Date">
+              <description><![CDATA[The End Date parameter sets the upper boundary of the date range filter.]]></description>
+            </param>
+            <param name="Filter" displayName="Filter">
+              <description><![CDATA[The Filter parameter will be used to search the Title and Sub-Title properties of the event.]]></description>
+            </param>
+              <param name="CategoryIDsConstraint" displayName="Category IDs Constraint">
+                  <description><![CDATA[The Category Filter parameter will be used to filter the event by category ids, separate multiple ids by comma.]]></description>
+              </param>
+              <param name="DepartmentIDsConstraint" displayName="Department IDs Constraint">
+                  <description><![CDATA[The Department Filter parameter will be used to filter the event by department ids, separate multiple ids by comma.]]></description>
+              </param>
+          </params>
+          <result name="Vision.Cms.MvcComponents.Calendar.Api.Response.EventFindResponse" displayName="Find Events Response">
+            <description><![CDATA[This response returns a paging list for found events.]]></description>
+            <fields>
+              <field name="PagingList" displayName="Paging List">
+                <description><![CDATA[This field contains a paging list of the records found in the request.]]></description>
+              </field>
+            </fields>
+          </result>
+        </api>
+        <api name="vision.cms.calendarcomponent.event.get" displayName="Get Event">
+          <description><![CDATA[This function retrieves or gets a single event.]]></description>
+          <params>
+            <param name="ID" displayName="ID">
+              <description><![CDATA[The ID parameter contains the ID of the event to be looked up.]]></description>
+            </param>
+            <param name="Fields" displayName="Fields">
+              <description>
+                <![CDATA[
+                  The Fields parameter is a combination of flags that sets which fields in the event record should be returned. Just add the values of the flags below to get the appropriate fields.<br/>
+                 <br/>
+                  1 - is for Basic fields which include Title, Sub-Title etc.<br/>
+                  2 - is for the Content field<br/>
+                  4 - is for the Document field<br/>
+                  8 - is for the Registration Setting field<br/>
+                  16 - is for the Category field<br/>
+                  32 - is for the Department field<br/>
+                  64 - is for the Content Review field<br/>
+                  128 - is for the MemberGroup field<br/>
+                ]]>
+              </description>
+            </param>
+          </params>
+          <result name="Vision.Cms.MvcComponents.Calendar.Api.Response.EventGetResponse" displayName="Get Event Response">
+            <description><![CDATA[This response contains the first event found with the parameters along with the chosen fields.]]></description>
+            <fields>
+              <field name="Event" displayName="Event">
+                <description><![CDATA[This field contains a single event.]]></description>
+              </field>
+            </fields>
+          </result>
+        </api>
+        <api name="vision.cms.calendarcomponent.eventregistration.find" displayName="Find Event Registrations">
+          <description><![CDATA[This function retrieves event registrations based on parameters.]]></description>
+          <params>
+            <param name="PageIndex" displayName="Page Index">
+              <description><![CDATA[The Page Index parameter controls which page of records to retrieve from the request. This parameter works with the Page Size parameter.]]></description>
+            </param>
+            <param name="PageSize" displayName="Page Size">
+              <description><![CDATA[The Page Size parameter controls how many records will be retrieved per request.]]></description>
+            </param>
+            <param name="EventID" displayName="Event ID">
+              <description><![CDATA[The Event ID parameter will filter the event registrations based on the event ID. This field is not required.]]></description>
+            </param>
+            <param name="SubmittedBy" displayName="Submitted By">
+              <description><![CDATA[The Submitted By parameter will filter the event registrations based on the submitter's or website user's email address. This field is not required.]]></description>
+            </param>
+            <param name="RegistrationStatus" displayName="Registration Status">
+              <description>
+                <![CDATA[
+                The Registration Status filters the event registrations by status.<br/>
+                <br/>
+                1 - Pending<br/>
+                2 - Confirmed<br/>
+                3 - Cancelled<br/>
+                ]]>
+              </description>
+            </param>
+          </params>
+          <result name="Vision.Cms.MvcComponents.Calendar.Api.Response.EventRegistrationFindResponse" displayName="Find Event Registrations Response">
+            <description><![CDATA[This response returns a the filtered list of event registrations.]]></description>
+            <fields>
+              <field name="PagingList" displayName="Paging List">
+                <description><![CDATA[This field contains a paging list of the records found in the request.]]></description>
+              </field>
+            </fields>
+          </result>
+        </api>
+        <api name="vision.cms.calendarcomponent.eventregistration.get" displayName="Get Event Registration">
+          <description><![CDATA[This function retrieves or gets a single event registration.]]></description>
+          <params>
+            <param name="RegistrationID" displayName="Registration ID">
+              <description><![CDATA[The Registration ID parameter contains the ID of the event registration to be looked up. This parameter is not required.]]></description>
+            </param>
+            <param name="GUID" displayName="GUID">
+              <description><![CDATA[The GUID parameter contains the GUID value of the event registration to be looked up. This parameter is not required.]]></description>
+            </param>
+          </params>
+          <result name="Vision.Cms.MvcComponents.Calendar.Api.Response.EventRegistrationGetResponse" displayName="Get Event Registration Response">
+            <description><![CDATA[This response contains the first event registration found with the parameters.]]></description>
+            <fields>
+              <field name="EventRegistration" displayName="Event Registration">
+                <description><![CDATA[This field contains a single event registration.]]></description>
+              </field>
+            </fields>
+          </result>
+        </api>
+        <api name="vision.cms.calendarcomponent.eventwaitingemail.find" displayName="Find Event Registration Waiting List Response">
+          <description><![CDATA[This function will list the information on emails in the waiting list for the event registration.]]></description>
+          <params>
+            <param name="PageIndex" displayName="Page Index">
+              <description><![CDATA[The Page Index parameter controls which page of records to retrieve from the request. This parameter works with the Page Size parameter.]]></description>
+            </param>
+            <param name="PageSize" displayName="Page Size">
+              <description><![CDATA[The Page Size parameter controls how many records will be retrieved per request.]]></description>
+            </param>
+            <param name="EventID" displayName="Event ID">
+              <description><![CDATA[The Event ID parameter will filter the event registrations based on the event ID. This field is not required.]]></description>
+            </param>
+            <param name="IsSent" displayName="Is Sent">
+              <description><![CDATA[The Is Sent parameter if set to 0, will return all waiting list email addresses that have not received event registration emails, if set to 1 will return email addresses which have been sent event registration emails.]]></description>
+            </param>
+            <param name="SubmittedBy" displayName="Submitted By">
+              <description><![CDATA[The Submitted By parameter will filter the event registrations based on the submitter's or website user's email address. This field is not required.]]></description>
+            </param>
+          </params>
+          <result name="Vision.Cms.MvcComponents.Calendar.Api.Response.EventWaitingEmailFindResponse" displayName="Find Event Registration Waiting List Response">
+            <description><![CDATA[This response contains a list of waiting list emails along with their information.]]></description>
+            <fields>
+              <field name="PagingList" displayName="Paging List">
+                <description><![CDATA[This field contains a paging list of the records found in the request.]]></description>
+              </field>
+            </fields>
+          </result>
+        </api>
+      </apis>
+      <datas>
+        <data type="Vision.Cms.MvcComponents.Calendar.Api.Domain.Event" displayName="Event">
+          <description><![CDATA[Event]]></description>
+          <fields>
+            <field name="ID" displayName="ID">
+              <description><![CDATA[ID]]></description>
+            </field>
+            <field name="Title" displayName="Title">
+              <description><![CDATA[Title]]></description>
+            </field>
+            <field name="SubTitle" displayName="Sub Title">
+              <description><![CDATA[Sub Title]]></description>
+            </field>
+            <field name="StartDate" displayName="Start Date">
+              <description><![CDATA[Start Date]]></description>
+            </field>
+            <field name="EndDate" displayName="End Date">
+              <description><![CDATA[End Date]]></description>
+            </field>
+            <field name="SubTitle" displayName="Sub Title">
+              <description><![CDATA[Sub Title]]></description>
+            </field>
+            <field name="DisplayLinkToDocumentViewer" displayName="Display Link To Document Viewer">
+              <description><![CDATA[Display Link To Document Viewer]]></description>
+            </field>
+            <field name="AllowNotification" displayName="Allow Notification">
+              <description><![CDATA[Allow Notification]]></description>
+            </field>
+            <field name="Content" displayName="Content">
+              <description><![CDATA[Content]]></description>
+            </field>
+            <field name="RedirectURL" displayName="Redirect URL">
+              <description><![CDATA[Redirect URL]]></description>
+            </field>
+            <field name="RedirectTarget" displayName="Redirect Target">
+              <description><![CDATA[Redirect Target]]></description>
+            </field>
+            <field name="Location" displayName="Location">
+              <description><![CDATA[Location]]></description>
+            </field>
+            <field name="Address" displayName="Address">
+              <description><![CDATA[Address]]></description>
+            </field>
+            <field name="Address2" displayName="Address2">
+              <description><![CDATA[Address2]]></description>
+            </field>
+            <field name="City" displayName="City">
+              <description><![CDATA[City]]></description>
+            </field>
+            <field name="State" displayName="State">
+              <description><![CDATA[State]]></description>
+            </field>
+            <field name="PostCode" displayName="Post Code">
+              <description><![CDATA[Post Code]]></description>
+            </field>
+            <field name="ThumbnailImage" displayName="Thumbnail Image">
+              <description><![CDATA[Thumbnail Image]]></description>
+            </field>
+            <field name="AllowRegistration" displayName="Allow Registration">
+              <description><![CDATA[Allow Registration]]></description>
+            </field>
+            <field name="RegistrationSetting" displayName="Registration Setting">
+              <description><![CDATA[Registration Setting]]></description>
+            </field>
+            <field name="Documents" displayName="Documents">
+              <description><![CDATA[Documents]]></description>
+            </field>
+            <field name="Categories" displayName="Categories">
+              <description><![CDATA[Categories]]></description>
+            </field>
+            <field name="Departments" displayName="Departments">
+              <description><![CDATA[Departments]]></description>
+            </field>
+            <field name="MemberGroups" displayName="MemberGroups">
+              <description><![CDATA[MemberGroups]]></description>
+            </field>
+            <field name="ContentReview" displayName="ContentReview">
+              <description><![CDATA[ContentReview]]></description>
+            </field>
+          </fields>
+        </data>      
+        <data type="Vision.Cms.MvcComponents.Calendar.Api.Domain.EventDocument" displayName="Event Document">
+          <description><![CDATA[Event Document]]></description>
+          <fields>
+            <field name="ID" displayName="ID">
+              <description><![CDATA[ID]]></description>
+            </field>
+            <field name="Type" displayName="Type">
+              <description><![CDATA[Type]]></description>
+            </field>
+            <field name="FileID" displayName="File ID">
+              <description><![CDATA[File ID]]></description>
+            </field>
+            <field name="EventID" displayName="Event ID">
+              <description><![CDATA[Event ID]]></description>
+            </field>
+            <field name="DcoumentSource" displayName="Dcoument Source">
+              <description><![CDATA[Dcoument Source]]></description>
+            </field>
+          </fields>
+        </data>
+        <data type="Vision.Cms.MvcComponents.Calendar.Api.Domain.EventRegistration" displayName="Event Registration">
+          <description><![CDATA[Event Registration]]></description>
+          <fields>
+            <field name="ID" displayName="ID">
+              <description><![CDATA[ID]]></description>
+            </field>
+            <field name="EventID" displayName="Event ID">
+              <description><![CDATA[Event ID]]></description>
+            </field>
+            <field name="GUID" displayName="GUID">
+              <description><![CDATA[GUID]]></description>
+            </field>
+            <field name="RegistrationStatus" displayName="Registration Status">
+              <description><![CDATA[Registration Status]]></description>
+            </field>
+            <field name="RegisterredDate" displayName="Registerred Date">
+              <description><![CDATA[Registerred Date]]></description>
+            </field>
+            <field name="SubmittedBy" displayName="Submitted By">
+              <description><![CDATA[Submitted By]]></description>
+            </field>
+            <field name="RegistrationFeeStatus" displayName="Registration Fee Status">
+              <description><![CDATA[Registration Fee Status]]></description>
+            </field>
+            <field name="TransactionID" displayName="Transaction ID">
+              <description><![CDATA[Transaction ID]]></description>
+            </field>
+            <field name="FromFrontend" displayName="From Frontend">
+              <description><![CDATA[From Frontend]]></description>
+            </field>
+            <field name="TotalFee" displayName="Total Fee">
+              <description><![CDATA[Total Fee]]></description>
+            </field>
+            <field name="Attendees" displayName="Attendees">
+              <description><![CDATA[Attendees]]></description>
+            </field>
+          </fields>
+        </data>
+        <data type="Vision.Cms.MvcComponents.Calendar.Api.Domain.EventWaitingEmail" displayName="Event Waiting Email">
+          <description><![CDATA[Event Waiting Email]]></description>
+          <fields>
+            <field name="Email" displayName="Email">
+              <description><![CDATA[Email]]></description>
+            </field>
+            <field name="CreatedDate" displayName="Created Date">
+              <description><![CDATA[Created Date]]></description>
+            </field>
+            <field name="IsSent" displayName="Is Sent">
+              <description><![CDATA[Is Sent]]></description>
+            </field>
+            <field name="SentDate" displayName="Sent Date">
+              <description><![CDATA[Sent Date]]></description>
+            </field>
+            <field name="RegistrationID" displayName="Registration ID">
+              <description><![CDATA[Registration ID]]></description>
+            </field>
+            <field name="SubmittedBy" displayName="Submitted By">
+              <description><![CDATA[Submitted By]]></description>
+            </field>
+            <field name="EventID" displayName="Event ID">
+              <description><![CDATA[Event ID]]></description>
+            </field>
+          </fields>
+        </data>
+        <data type="Vision.Cms.MvcComponents.Calendar.Api.Domain.EventRegistrationSetting" displayName="Event Registration Setting">
+          <description><![CDATA[Event Registration Setting]]></description>
+          <fields>
+            <field name="DeadLine" displayName="Deadline">
+              <description><![CDATA[Deadline]]></description>
+            </field>
+            <field name="MaxNumber" displayName="Max Number">
+              <description><![CDATA[Max Number]]></description>
+            </field>
+            <field name="Fee" displayName="Fee">
+              <description><![CDATA[Fee]]></description>
+            </field>
+            <field name="ContactPhone" displayName="Contact Phone">
+              <description><![CDATA[Contact Phone]]></description>
+            </field>
+            <field name="ContactPhoneExt" displayName="Contact Phone Ext">
+              <description><![CDATA[Contact Phone Ext]]></description>
+            </field>
+            <field name="WaitingMessage" displayName="Waiting Message">
+              <description><![CDATA[Waiting Message]]></description>
+            </field>
+            <field name="AllowWaitingList" displayName="Allow Waiting List">
+              <description><![CDATA[Allow Waiting List]]></description>
+            </field>
+            <field name="DisplayContactPhone" displayName="Display Contact Phone">
+              <description><![CDATA[Display Contact Phone]]></description>
+            </field>
+            <field name="DisplayContactEmail" displayName="Display Contact Email">
+              <description><![CDATA[Display Contact Email]]></description>
+            </field>
+            <field name="DisplayWaitingMessage" displayName="Display Waiting Message">
+              <description><![CDATA[Display Waiting Message]]></description>
+            </field>
+          </fields>
+        </data>
+        <data type="Vision.Cms.MvcComponents.Calendar.Api.Domain.EventRegistrationAttendee" displayName="Event Registration Attendee">
+          <description><![CDATA[Event Registration Attendee]]></description>
+          <fields>
+            <field name="ID" displayName="ID">
+              <description><![CDATA[ID]]></description>
+            </field>
+            <field name="IsOwner" displayName="Is Owner">
+              <description><![CDATA[Is Owner]]></description>
+            </field>
+            <field name="OrganizationName" displayName="Organization Name">
+              <description><![CDATA[Organization Name]]></description>
+            </field>
+            <field name="FirstName" displayName="First Name">
+              <description><![CDATA[First Name]]></description>
+            </field>
+            <field name="LastName" displayName="Last Name">
+              <description><![CDATA[Last Name]]></description>
+            </field>
+            <field name="Title" displayName="Title">
+              <description><![CDATA[Title]]></description>
+            </field>
+            <field name="Address" displayName="Address">
+              <description><![CDATA[Address]]></description>
+            </field>
+            <field name="Address2" displayName="Address2">
+              <description><![CDATA[Address2]]></description>
+            </field>
+            <field name="City" displayName="City">
+              <description><![CDATA[City]]></description>
+            </field>
+            <field name="State" displayName="State">
+              <description><![CDATA[State]]></description>
+            </field>
+            <field name="PostCode" displayName="Post Code">
+              <description><![CDATA[Post Code]]></description>
+            </field>
+            <field name="Email" displayName="Email">
+              <description><![CDATA[Email]]></description>
+            </field>
+            <field name="Phone" displayName="Phone">
+              <description><![CDATA[Phone]]></description>
+            </field>
+            <field name="PhoneExt" displayName="Phone Ext">
+              <description><![CDATA[Phone Ext]]></description>
+            </field>
+            <field name="Order" displayName="Order">
+              <description><![CDATA[Order]]></description>
+            </field>
+          </fields>
+        </data>
+      </datas>
+    </category>   
+  </categories>
+</visionApi>

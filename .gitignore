@@ -3,3 +3,10 @@
 ################################################################################
 
 /src/Vision.Api.Common/bin
+/src/Vision.Api.Common/obj
+/src/Vision.Cms.Mvc.Api/bin
+/src/Vision.Cms.Mvc.Api/obj
+/src/Vision.Cms.MvcComponents.Calendar.Api/bin
+/src/Vision.Cms.MvcComponents.Calendar.Api/obj
+/src/Vision.Cms.MvcComponents.ServiceRequest.Api/bin
+/src/Vision.Cms.MvcComponents.ServiceRequest.Api/obj

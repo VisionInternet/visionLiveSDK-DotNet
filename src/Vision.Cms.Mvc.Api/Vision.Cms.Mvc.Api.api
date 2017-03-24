@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<visionApi>
+  <categories>
+    <category name="vision.cms.core.system" displayName="System" isDefault="true">
+      <description><![CDATA[System]]></description>
+      <apis>
+      </apis>
+      <datas>
+        <data type="Vision.Api.Common.Domain.PagingList&lt;T1&gt;" displayName="Paging List">
+          <description><![CDATA[Paging List]]></description>
+          <fields>
+            <field name="TotalResults" displayName="Total Results">
+              <description><![CDATA[Total Results]]></description>
+            </field>
+            <field name="HasNext" displayName="Has Next">
+              <description><![CDATA[Has Next]]></description>
+            </field>
+            <field name="Content" displayName="Content">
+              <description><![CDATA[Content]]></description>
+            </field>
+          </fields>
+        </data>
+        <data type="Vision.Cms.Mvc.Api.Category" displayName="Category">
+          <description><![CDATA[Category]]></description>
+          <fields>
+            <field name="ID" displayName="Category ID">
+              <description><![CDATA[Category ID]]></description>
+            </field>
+            <field name="Name" displayName="Category Name">
+              <description><![CDATA[Category Name]]></description>
+            </field>
+          </fields>
+        </data>
+        <data type="Vision.Cms.Mvc.Api.ContentReview" displayName="Content Review">
+          <description><![CDATA[Content Review]]></description>
+          <fields>
+            <field name="CustomDate" displayName="Custom Date">
+              <description><![CDATA[Custom Date]]></description>
+            </field>
+            <field name="ScheduleType" displayName="Schedule Type">
+              <description><![CDATA[Schedule Type]]></description>
+            </field>
+          </fields>
+        </data>
+        <data type="Vision.Cms.Mvc.Api.Department" displayName="Department">
+          <description><![CDATA[Department]]></description>
+          <fields>
+            <field name="ID" displayName="Department ID">
+              <description><![CDATA[Department ID]]></description>
+            </field>
+            <field name="Name" displayName="Department Name">
+              <description><![CDATA[Department Name]]></description>
+            </field>
+          </fields>
+        </data>
+        <data type="Vision.Cms.Mvc.Api.MemberGroup" displayName="Member Group">
+          <description><![CDATA[Member Group]]></description>
+          <fields>
+            <field name="ID" displayName="Member Group ID">
+              <description><![CDATA[Member Group ID]]></description>
+            </field>
+            <field name="Name" displayName="Member Group Name">
+              <description><![CDATA[Member Group Name]]></description>
+            </field>
+          </fields>
+        </data>
+      </datas>
+    </category>
+  </categories>
+</visionApi>

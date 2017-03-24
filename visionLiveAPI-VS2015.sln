@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AA58B823-A8FC-4549-A36A-4CA7BB1627DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "example", "example", "{8CC8EBAA-3903-44C4-A55C-75DDEC41C527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vision.Api.Common", "src\Vision.Api.Common\Vision.Api.Common.csproj", "{007EF1BC-3F44-4D00-BB5D-0401DFB05FF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vision.Cms.Mvc.Api", "src\Vision.Cms.Mvc.Api\Vision.Cms.Mvc.Api.csproj", "{046B96F1-B20F-4775-8505-9B67A4BE9D5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vision.Cms.MvcComponents.Calendar.Api", "src\Vision.Cms.MvcComponents.Calendar.Api\Vision.Cms.MvcComponents.Calendar.Api.csproj", "{BBB2F3B3-AE51-40BA-965B-87FB1607DB39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vision.Cms.MvcComponents.ServiceRequest.Api", "src\Vision.Cms.MvcComponents.ServiceRequest.Api\Vision.Cms.MvcComponents.ServiceRequest.Api.csproj", "{9D2483F6-F794-4A13-B0F6-4496971AAE1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{007EF1BC-3F44-4D00-BB5D-0401DFB05FF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007EF1BC-3F44-4D00-BB5D-0401DFB05FF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007EF1BC-3F44-4D00-BB5D-0401DFB05FF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007EF1BC-3F44-4D00-BB5D-0401DFB05FF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{046B96F1-B20F-4775-8505-9B67A4BE9D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{046B96F1-B20F-4775-8505-9B67A4BE9D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{046B96F1-B20F-4775-8505-9B67A4BE9D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{046B96F1-B20F-4775-8505-9B67A4BE9D5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB2F3B3-AE51-40BA-965B-87FB1607DB39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBB2F3B3-AE51-40BA-965B-87FB1607DB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBB2F3B3-AE51-40BA-965B-87FB1607DB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBB2F3B3-AE51-40BA-965B-87FB1607DB39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D2483F6-F794-4A13-B0F6-4496971AAE1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2483F6-F794-4A13-B0F6-4496971AAE1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2483F6-F794-4A13-B0F6-4496971AAE1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2483F6-F794-4A13-B0F6-4496971AAE1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{007EF1BC-3F44-4D00-BB5D-0401DFB05FF0} = {AA58B823-A8FC-4549-A36A-4CA7BB1627DD}
+		{046B96F1-B20F-4775-8505-9B67A4BE9D5D} = {AA58B823-A8FC-4549-A36A-4CA7BB1627DD}
+		{BBB2F3B3-AE51-40BA-965B-87FB1607DB39} = {AA58B823-A8FC-4549-A36A-4CA7BB1627DD}
+		{9D2483F6-F794-4A13-B0F6-4496971AAE1E} = {AA58B823-A8FC-4549-A36A-4CA7BB1627DD}
+	EndGlobalSection
+EndGlobal
