@@ -5,6 +5,11 @@ API Explorer: http://api.visioninternet.com/
 
 API Document: http://api.visioninternet.com/Document
 
+Install in Visual Studio
+```
+PM > Install-Package visionLiveSDKDotNet
+```
+
 C# Example:
 ```
 var client = new JSONApiClient("http://www.city.gov/API", "{App Key}", "{App Secret}");
