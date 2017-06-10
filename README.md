@@ -5,9 +5,13 @@ API Explorer: http://api.visioninternet.com/
 
 API Document: http://api.visioninternet.com/Document
 
-Install in Visual Studio
+Install
 ```
 PM > Install-Package visionLiveSDKDotNet
+```
+Uninstall
+```
+PM > Uninstall-Package visionLiveSDKDotNet
 ```
 
 C# Example:
