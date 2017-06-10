@@ -81,5 +81,13 @@ namespace Vision.Cms.MvcComponents.Calendar.Api.Domain
         [XmlElement]
         [ApiDataStructureField]
         public bool DisplayWaitingMessage { get; set; }
+
+        /// <summary>
+        /// get or set  event registrastion EnableWaitingListEnotification
+        /// </summary>
+        [XmlElement]
+        [ApiDataStructureField]
+        public bool EnableWaitingListEnotification { get; set; }
+
     }
 }

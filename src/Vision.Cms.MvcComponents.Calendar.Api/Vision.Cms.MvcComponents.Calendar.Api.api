@@ -30,6 +30,9 @@
               <param name="DepartmentIDsConstraint" displayName="Department IDs Constraint">
                   <description><![CDATA[The Department Filter parameter will be used to filter the event by department ids, separate multiple ids by comma.]]></description>
               </param>
+              <param name="IncludeLocation" displayName="Include Location">
+                  <description><![CDATA[Include location parameter will include the event location.  Type in true or false to include location. However, if this is set to true the page size will be limited to 20 events only. ]]></description>
+              </param>
           </params>
           <result name="Vision.Cms.MvcComponents.Calendar.Api.Response.EventFindResponse" displayName="Find Events Response">
             <description><![CDATA[This response returns a paging list for found events.]]></description>
@@ -154,6 +157,22 @@
               </field>
             </fields>
           </result>
+        </api>
+        <api name="vision.cms.calendarcomponent.eventlocation.get" displayName="Get Event Location">
+            <description><![CDATA[This function retrieves or gets a single event.]]></description>
+            <params>
+                <param name="ID" displayName="ID">
+                    <description><![CDATA[The ID parameter contains the ID of the event to be looked up.]]></description>
+                </param>
+            </params>
+            <result name="Vision.Cms.MvcComponents.Calendar.Api.Response.EventLocationGetResponse" displayName="Get Event Response">
+                <description><![CDATA[This response contains the first event location found with the parameters.]]></description>
+                <fields>
+                    <field name="EventLocation" displayName="Event Location">
+                        <description><![CDATA[This field contains a single event location.]]></description>
+                    </field>
+                </fields>
+            </result>
         </api>
       </apis>
       <datas>
@@ -406,6 +425,29 @@
             </field>
           </fields>
         </data>
+          <data type="Vision.Cms.MvcComponents.Calendar.Api.Domain.EventLocation" displayName="Event Location">
+              <description><![CDATA[Event Location]]></description>
+              <fields>
+                  <field name="Location" displayName="Location">
+                      <description><![CDATA[Location]]></description>
+                  </field>
+                  <field name="Address" displayName="Address">
+                      <description><![CDATA[Address]]></description>
+                  </field>
+                  <field name="Address2" displayName="Address2">
+                      <description><![CDATA[Address2]]></description>
+                  </field>
+                  <field name="City" displayName="City">
+                      <description><![CDATA[City]]></description>
+                  </field>
+                  <field name="State" displayName="State">
+                      <description><![CDATA[State]]></description>
+                  </field>
+                  <field name="PostCode" displayName="Post Code">
+                      <description><![CDATA[Post Code]]></description>
+                  </field>
+              </fields>
+          </data>
       </datas>
     </category>   
   </categories>

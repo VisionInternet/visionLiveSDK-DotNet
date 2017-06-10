@@ -56,6 +56,7 @@
     </Compile>
     <Compile Include="Domain\Event.cs" />
     <Compile Include="Domain\EventDocument.cs" />
+    <Compile Include="Domain\EventLocation.cs" />
     <Compile Include="Domain\EventRegistrationAttendee.cs" />
     <Compile Include="Domain\EventRegistration.cs" />
     <Compile Include="Domain\EventRegistrationSetting.cs" />
@@ -64,11 +65,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\EventFindRequest.cs" />
     <Compile Include="Request\EventGetRequest.cs" />
+    <Compile Include="Request\EventLocationGetRequest.cs" />
     <Compile Include="Request\EventRegistrationFindRequest.cs" />
     <Compile Include="Request\EventRegistrationGetRequest.cs" />
     <Compile Include="Request\EventWaitingEmailFindRequest.cs" />
     <Compile Include="Response\EventFindResponse.cs" />
     <Compile Include="Response\EventGetResponse.cs" />
+    <Compile Include="Response\EventLocationGetResponse.cs" />
     <Compile Include="Response\EventRegistrationFindResponse.cs" />
     <Compile Include="Response\EventRegistrationGetResponse.cs" />
     <Compile Include="Response\EventWaitingEmailFindResponse.cs" />

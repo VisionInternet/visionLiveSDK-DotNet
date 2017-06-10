@@ -65,6 +65,7 @@
     <Compile Include="Annotation\ApiDocumentProviderAttribute.cs" />
     <Compile Include="Annotation\ApiNameAttribute.cs" />
     <Compile Include="Annotation\ApiRequestAttribute.cs" />
+    <Compile Include="Annotation\ApiRequestParametersResolverAttribute.cs" />
     <Compile Include="Annotation\ApiResponseAttribute.cs" />
     <Compile Include="Annotation\ApiResponsePropertyAttribute.cs" />
     <Compile Include="Annotation\ApiDataStructureAttribute.cs" />
@@ -98,7 +99,12 @@
     <Compile Include="Document\ApiDocumentApiDataStructureField.cs" />
     <Compile Include="Document\IApiDocumentProvider.cs" />
     <Compile Include="Parser\NewtonApiParser.cs" />
+    <Compile Include="Request\ApiRequestParametersResolver.cs" />
     <Compile Include="Request\ErrorApiRequest.cs" />
+    <Compile Include="Request\GenericRequestTypeFactoryAttribute.cs" />
+    <Compile Include="Request\GenericRequestTypePropertyDependencyAttribute.cs" />
+    <Compile Include="Request\IApiRequestParametersResolver.cs" />
+    <Compile Include="Request\IGenericRequestTypeFactory.cs" />
     <Compile Include="Response\ErrorApiResponse.cs" />
     <Compile Include="Builder\RequestSender.cs" />
     <Compile Include="Token\ConstantApiTokenGenerator.cs" />

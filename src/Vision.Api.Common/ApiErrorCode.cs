@@ -14,6 +14,8 @@ namespace Vision.Api.Common
         public const string PARAMETER = "902";
         public const string NOTFOUND = "901";
         public const string NOTAUTHORIZED = "900";
+        public const string CONTENTTYPE_MISSING = "906";
+        public const string CONTENTTYPE_NOTMATCH = "907";
 
         public const string APIURLWRONG = "404";
         public const string MISSINGMETHOD = "100";

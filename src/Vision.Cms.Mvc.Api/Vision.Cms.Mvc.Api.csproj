@@ -52,12 +52,40 @@
     <Compile Include="..\..\RegularAssemblyInfo.cs">
       <Link>Properties\RegularAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="ApiContentConstants.cs" />
+    <Compile Include="Domain\BusinessDirectory\BusinessContent.cs" />
+    <Compile Include="Domain\Calendar\EventContent.cs" />
     <Compile Include="Domain\Category.cs" />
+    <Compile Include="Domain\ContentAPINameAttribute.cs" />
+    <Compile Include="Domain\ContentAPINameManager.cs" />
+    <Compile Include="Domain\ContentGenericRequestTypeFactory.cs" />
     <Compile Include="Domain\ContentReview.cs" />
     <Compile Include="Domain\Department.cs" />
+    <Compile Include="Domain\FacilityDirectory\FacilityContent.cs" />
+    <Compile Include="Domain\FAQ\FAQContent.cs" />
+    <Compile Include="Domain\FilterFieldsType.cs" />
+    <Compile Include="Domain\Form\FormContent.cs" />
+    <Compile Include="Domain\IContent.cs" />
+    <Compile Include="Domain\JobPosts\JobContent.cs" />
+    <Compile Include="Domain\MeetingManager\MeetingAgendaContent.cs" />
+    <Compile Include="Domain\MeetingManager\MeetingItemContent.cs" />
+    <Compile Include="Domain\MeetingManager\MeetingMinutesContent.cs" />
     <Compile Include="Domain\MemberGroup.cs" />
+    <Compile Include="Domain\News\NewsContent.cs" />
+    <Compile Include="Domain\OnlinePolls\PollContent.cs" />
+    <Compile Include="Domain\PhotoAlbum\PhotoAlbumContent.cs" />
+    <Compile Include="Domain\Rfps\RfpContent.cs" />
+    <Compile Include="Domain\ServiceDirectory\ServiceContent.cs" />
+    <Compile Include="Domain\StaffDirectory\StaffContent.cs" />
+    <Compile Include="Domain\Tag.cs" />
+    <Compile Include="IContentAPIService.cs" />
     <Compile Include="InternalConstants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\ContentFindRequest.cs" />
+    <Compile Include="Request\ContentGetRequest.cs" />
+    <Compile Include="Request\ContentRequest.cs" />
+    <Compile Include="Response\ContentFindResponse.cs" />
+    <Compile Include="Response\ContentGetResponse.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vision.Api.Common\Vision.Api.Common.csproj">

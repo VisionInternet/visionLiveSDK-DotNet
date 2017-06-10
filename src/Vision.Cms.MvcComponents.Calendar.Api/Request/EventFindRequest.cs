@@ -58,5 +58,11 @@ namespace Vision.Cms.MvcComponents.Calendar.Api.Request
         /// </summary>
         [ApiRequestParameter]
         public string DepartmentIDsConstraint { get; set; }
+
+        /// <summary>
+        /// get or set to include location
+        /// </summary>
+        [ApiRequestParameter(required: false)]
+        public bool? IncludeLocation { get; set; }
     }
 }

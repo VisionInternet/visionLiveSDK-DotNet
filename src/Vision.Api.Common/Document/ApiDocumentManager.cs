@@ -17,7 +17,7 @@ namespace Vision.Api.Common.Document
         static ApiDocumentManager()
         {
             var assemblies = new List<Assembly>();
-            var exepath = Path.GetDirectoryName(typeof(ApiDocumentManager).Assembly.CodeBase);
+            var exepath = Path.GetDirectoryName(new System.Uri(typeof(ApiDocumentManager).Assembly.CodeBase).LocalPath);
             if (exepath.IndexOf("file:\\") >= 0)
                 exepath = exepath.Substring("file:\\".Length);
             var dllFiles = Directory.GetFiles(exepath, "*.dll");
@@ -39,7 +39,7 @@ namespace Vision.Api.Common.Document
             }
 
             AssemblyDocumentProviderMapping = new Dictionary<Assembly, IApiDocumentProvider>();
-            foreach (var assembly in allAssemblies)
+            foreach (var assembly in allAssemblies.Where(c => c.FullName.StartsWith("Vision.")))
             {
                 if (!AssemblyDocumentProviderMapping.Any(c => c.Key.FullName.Equals(assembly.FullName)))
                 {

@@ -4,6 +4,72 @@
     <category name="vision.cms.core.system" displayName="System" isDefault="true">
       <description><![CDATA[System]]></description>
       <apis>
+        <api name="vision.cms.core.system.content.get" displayName="Get Content">
+          <description><![CDATA[This function retrieves or gets a single content.]]></description>
+          <params>
+            <param name="ContentTypeName" displayName="ContentTypeName">
+              <description><![CDATA[The ContentTypeName parameter contains the name of the content(BusinessDirectory, Event, FacilityDirectory, FAQ, Form, Job, MeetingAgenda, MeetingItem, MeetingMinutes, News, OnlinePolls, PhotoAlbum, RFP, ServiceDirectory, StaffDirectory).]]></description>
+            </param>
+            <param name="ID" displayName="ID">
+              <description><![CDATA[The ID parameter contains the ID of the content to be looked up.]]></description>
+            </param>
+            <param name="Fields" displayName="Fields">
+              <description>
+                <![CDATA[
+                  The Fields parameter is a combination of flags that sets which fields in the content record should be returned. Just add the values of the flags below to get the appropriate fields.<br/>
+                 <br/>
+                  1 - is for Basic fields which include Title, Sub-Title etc.<br/>
+                  2 - is for the Content field<br/>
+                  4 - is for the Document field<br/>
+                  8 - is for the Registration Setting field<br/>
+                  16 - is for the Category field<br/>
+                  32 - is for the Department field<br/>
+                  64 - is for the Content Review field<br/>
+                  128 - is for the MemberGroup field<br/>
+                ]]>
+              </description>
+            </param>
+          </params>
+          <result name="Vision.Cms.Mvc.Api.Response.ContentGetResponse" displayName="Get Content Response">
+            <description><![CDATA[This response contains the first content found with the parameters along with the chosen fields.]]></description>
+            <fields>
+              <field name="Content" displayName="Content">
+                <description><![CDATA[This field contains a single Content.]]></description>
+              </field>
+            </fields>
+          </result>
+        </api>
+        <api name="vision.cms.core.system.content.find" displayName="Find Content">
+          <description><![CDATA[This function retrieves or gets a content collection.]]></description>
+          <params>
+            <param name="ContentTypeName" displayName="ContentTypeName">
+              <description><![CDATA[The ContentTypeName parameter contains the name of the content(BusinessDirectory, Event, FacilityDirectory, FAQ, Form, Job, MeetingAgenda, MeetingItem, MeetingMinutes, News, OnlinePolls, PhotoAlbum, RFP, ServiceDirectory, StaffDirectory).]]></description>
+            </param>
+            <param name="PageIndex" displayName="Page Index">
+              <description><![CDATA[The Page Index parameter controls which page of records to retrieve from the request. This parameter works with the Page Size parameter.]]></description>
+            </param>
+            <param name="PageSize" displayName="Page Size">
+              <description><![CDATA[The Page Size parameter controls how many records will be retrieved per request.]]></description>
+            </param>
+            <param name="Filter" displayName="Filter">
+              <description><![CDATA[The Filter parameter will be used to search the Title and Sub-Title properties of the content.]]></description>
+            </param>
+            <param name="CategoryIDsConstraint" displayName="Category IDs Constraint">
+              <description><![CDATA[The Category Filter parameter will be used to filter the event by category ids, separate multiple ids by comma.]]></description>
+            </param>
+            <param name="DepartmentIDsConstraint" displayName="Department IDs Constraint">
+              <description><![CDATA[The Department Filter parameter will be used to filter the event by department ids, separate multiple ids by comma.]]></description>
+            </param>
+          </params>
+          <result name="Vision.Cms.Mvc.Api.Response.ContentFindResponse" displayName="Find Content Response">
+            <description><![CDATA[This response returns a paging list of content.]]></description>
+            <fields>
+              <field name="PagingList" displayName="Paging List">
+                <description><![CDATA[Return content by paging list]]></description>
+              </field>
+            </fields>
+          </result>
+        </api>
       </apis>
       <datas>
         <data type="Vision.Api.Common.Domain.PagingList&lt;T1&gt;" displayName="Paging List">
@@ -61,6 +127,17 @@
             </field>
             <field name="Name" displayName="Member Group Name">
               <description><![CDATA[Member Group Name]]></description>
+            </field>
+          </fields>
+        </data>
+        <data type="Vision.Cms.Mvc.Api.Tag" displayName="Tag">
+          <description><![CDATA[Tag]]></description>
+          <fields>
+            <field name="ID" displayName="Tag ID">
+              <description><![CDATA[Tag ID]]></description>
+            </field>
+            <field name="Name" displayName="Tag Name">
+              <description><![CDATA[Tag Name]]></description>
             </field>
           </fields>
         </data>
