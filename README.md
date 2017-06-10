@@ -1,5 +1,5 @@
 # visionLiveAPIDotNetSDK
-The DotNet SDK project for visionLive API
+The DotNet SDK project for visionLive API (for .NET Framework 4.6.2+)
 
 API Explorer: http://api.visioninternet.com/
 
