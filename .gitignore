@@ -10,3 +10,5 @@
 /src/Vision.Cms.MvcComponents.Calendar.Api/obj
 /src/Vision.Cms.MvcComponents.ServiceRequest.Api/bin
 /src/Vision.Cms.MvcComponents.ServiceRequest.Api/obj
+/example/Vision.Api.Example/obj/Release
+/nuget/2017.2.605.0

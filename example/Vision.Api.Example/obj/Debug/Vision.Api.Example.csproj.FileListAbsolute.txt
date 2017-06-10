@@ -1,0 +1,12 @@
+D:\Project\git.VisionInternet\visionLiveAPIDotNetSDK\example\Vision.Api.Example\bin\Debug\Vision.Api.Example.exe.config
+D:\Project\git.VisionInternet\visionLiveAPIDotNetSDK\example\Vision.Api.Example\bin\Debug\Vision.Api.Example.exe
+D:\Project\git.VisionInternet\visionLiveAPIDotNetSDK\example\Vision.Api.Example\bin\Debug\Vision.Api.Example.pdb
+D:\Project\git.VisionInternet\visionLiveAPIDotNetSDK\example\Vision.Api.Example\bin\Debug\Newtonsoft.Json.dll
+D:\Project\git.VisionInternet\visionLiveAPIDotNetSDK\example\Vision.Api.Example\bin\Debug\Vision.Api.Common.dll
+D:\Project\git.VisionInternet\visionLiveAPIDotNetSDK\example\Vision.Api.Example\bin\Debug\Vision.Cms.Mvc.Api.dll
+D:\Project\git.VisionInternet\visionLiveAPIDotNetSDK\example\Vision.Api.Example\bin\Debug\Vision.Cms.MvcComponents.Calendar.Api.dll
+D:\Project\git.VisionInternet\visionLiveAPIDotNetSDK\example\Vision.Api.Example\bin\Debug\Vision.Cms.MvcComponents.ServiceRequest.Api.dll
+D:\Project\git.VisionInternet\visionLiveAPIDotNetSDK\example\Vision.Api.Example\bin\Debug\Newtonsoft.Json.xml
+D:\Project\git.VisionInternet\visionLiveAPIDotNetSDK\example\Vision.Api.Example\obj\Debug\Vision.Api.Example.exe
+D:\Project\git.VisionInternet\visionLiveAPIDotNetSDK\example\Vision.Api.Example\obj\Debug\Vision.Api.Example.pdb
+D:\Project\git.VisionInternet\visionLiveAPIDotNetSDK\example\Vision.Api.Example\obj\Debug\Vision.Api.Example.csprojResolveAssemblyReference.cache
